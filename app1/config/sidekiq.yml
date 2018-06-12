@@ -1,0 +1,7 @@
+:schedule:
+  app1_seeder_worker:
+    cron: '0 */2 * * * *'
+    class: App1SeederWorker
+  app1_consumer_worker:
+    cron: '0 */5 * * * *'
+    class: App1ConsumerWorker
