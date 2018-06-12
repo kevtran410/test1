@@ -12,9 +12,9 @@
       <% if @seeds.present? %>
         <% @seeds.each do |seed| %>
           <tr>
-            <td><%= seed.id %></td>
-            <td><%= seed.label %></td>
-            <td><%= seed.consumed? %></td>
+            <td><%= seed["id"] %></td>
+            <td><%= seed["label"] %></td>
+            <td><%= seed["consumed"] %></td>
           </tr>
         <% end %>
       <% else %>
@@ -39,8 +39,8 @@
       <% if @fruits.present? %>
         <% @fruits.each do |fruit| %>
           <tr>
-            <td><%= fruit.id %></td>
-            <td><%= fruit.label %></td>
+            <td><%= fruit["id"] %></td>
+            <td><%= fruit["label"] %></td>
           </tr>
         <% end %>
       <% else %>

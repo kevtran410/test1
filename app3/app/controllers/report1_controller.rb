@@ -1,6 +1,8 @@
 class Report1Controller < ApplicationController
   def index
-    @seeds = Seed.app1
-    @fruits = Fruit.where(seed_id: @seeds.ids)
+    data = GetDataService.perform ENV["APP1_URL"]
+
+    @seeds = data["seeds"]
+    @fruits = data["fruits"]
   end
 end
