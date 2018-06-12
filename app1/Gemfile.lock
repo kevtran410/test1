@@ -252,6 +252,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.0)
   rails (~> 5.0.7)
+  redis
   sass-rails (~> 5.0)
   sidekiq
   sidekiq-scheduler
