@@ -1,0 +1,58 @@
+<script>
+  setTimeout("location.reload();",60000);
+</script>
+
+<div>
+  <h3>SEEDS</h3>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Label</td>
+        <td>Consumed</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @seeds.present? %>
+        <% @seeds.each do |seed| %>
+          <tr>
+            <td><%= seed.id %></td>
+            <td><%= seed.label %></td>
+            <td><%= seed.consumed? %></td>
+          </tr>
+        <% end %>
+      <% else %>
+        <tr>
+          <td></td>
+          <td>Not found</td>
+          <td></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <h3>FRUITS</h3>
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Label</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% if @fruits.present? %>
+        <% @fruits.each do |fruit| %>
+          <tr>
+            <td><%= fruit.id %></td>
+            <td><%= fruit.label %></td>
+          </tr>
+        <% end %>
+      <% else %>
+        <tr>
+          <td>Not found</td>
+          <td></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
