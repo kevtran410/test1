@@ -23,6 +23,7 @@ gem 'sidekiq-status'
 gem 'sidekiq-scheduler'
 gem 'sinatra'
 gem 'redis'
+gem 'yaml_db'
 
 group :development, :test do
   gem 'pry-rails'

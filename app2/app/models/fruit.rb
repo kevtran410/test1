@@ -3,5 +3,5 @@ class Fruit < ApplicationRecord
 
   validates :seed, presence: true
 
-  scope :current_10, ->{order("id DESC").limit(10)}
+  scope :current_10, ->{where("label LIKE ?", "#{label_prefix}%").order("id DESC").limit(10)}
 end
